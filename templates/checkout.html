@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <form method="post">
+        <label for="payment_method">Choose Payment Method:</label>
+        <select name="payment_method" id="payment_method">
+            <option value="Cash">Cash Payment</option>
+            <option value="Card">Card Payment</option>
+        </select>
+        <br>
+        <button type="submit">Confirm Order</button>
+    </form>
+    <a href="{{ url_for('view_cart') }}">Back to Cart</a>
+</body>
+</html>

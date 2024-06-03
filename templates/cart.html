@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body>
+    <h1>Cart</h1>
+    <ul>
+        {% for item in cart_items.values() %}
+            <li>{{ item.product.category }} - {{ item.product.name }}: {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('view_catalog') }}">Continue Shopping</a>
+    <a href="{{ url_for('checkout') }}">Checkout</a>
+</body>
+</html>
